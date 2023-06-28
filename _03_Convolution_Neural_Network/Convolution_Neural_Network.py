@@ -35,10 +35,10 @@ class NeuralNetwork(nn.Module):
         self.classifier = nn.Linear(512, 10)
 
     def forward(self, x):
-        out = self.features(x)
-        out = out.view(out.size(0), -1)
-        out = self.classifier(out)
-        return out
+        x = self.features(x)
+        x = out.view(out.size(0), -1)
+        x = self.classifier(x)
+        return x
 
     def _make_layers(self, cfg):
         layers = []
