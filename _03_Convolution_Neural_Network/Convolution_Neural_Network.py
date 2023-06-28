@@ -11,7 +11,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision
-import cillections
+import collections
 import numpy as np
 from tqdm import tqdm
 from torch.utils.data import DataLoader
