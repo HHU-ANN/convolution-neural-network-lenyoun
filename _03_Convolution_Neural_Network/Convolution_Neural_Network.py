@@ -36,7 +36,7 @@ class NeuralNetwork(nn.Module):
 
     def forward(self, x):
         x = self.features(x)
-        x = out.view(out.size(0), -1)
+        x = x.view(out.size(0), -1)
         x = self.classifier(x)
         return x
 
