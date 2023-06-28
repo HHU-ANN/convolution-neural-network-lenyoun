@@ -55,7 +55,7 @@ class NeuralNetwork(nn.Module):
         layers += [nn.AvgPool2d(kernel_size=1, stride=1)]
         return nn.Sequential(*layers)
 LR = 0.001
-EPOCHS = 25
+EPOCHS = 30
 BATCHSIZE = 100
 
 def read_data():
