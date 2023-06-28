@@ -29,7 +29,6 @@ cfg = {
 }
 
 class NeuralNetwork(nn.Module):
-    class NeuralNetwork(nn.Module):
     def __init__(self, vgg_name):
         super(NeuralNetwork, self).__init__()
         self.features = self._make_layers(cfg[vgg_name])
