@@ -56,7 +56,7 @@ class NeuralNetwork(nn.Module):
         layers += [nn.AvgPool2d(kernel_size=1, stride=1)]
         return nn.Sequential(*layers)
 LR = 0.001
-EPOCHS = 20
+EPOCHS = 25
 BATCHSIZE = 100
 
 def read_data():
@@ -69,7 +69,7 @@ def read_data():
     return dataset_train, dataset_val, data_loader_train, data_loader_val
 
 def main():
-    model = NeuralNetwork() # 若有参数则传入参数
+    model = NeuralNetwork("VGG16") # 若有参数则传入参数
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(current_dir)
     model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
